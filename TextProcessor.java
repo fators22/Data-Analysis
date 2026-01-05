@@ -44,8 +44,7 @@ public class TextProcessor {
         ArrayList<String> stopwords = FileOperator.getStringList("stopwords.txt");
         ArrayList<String> posts = FileOperator.getStringList("posts.txt");
         TextProcessor t = new TextProcessor(posts);
-        t.removeStopWords(stopwords);
-        System.out.println(t);
+
     }
     
 }
