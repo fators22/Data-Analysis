@@ -71,7 +71,7 @@ public class ArticleAnalyzer {
         String tt = lm.find() ? lm.group(1) : ""; //extract the destined part
 
         
-        result=new Article(lt, "", "", "", "","");
+        result=new Article(lt, ht, ct, dt, at, tt);
 
     return result;
 }
