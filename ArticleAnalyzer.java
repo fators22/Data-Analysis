@@ -22,12 +22,15 @@ public class ArticleAnalyzer {
     public static void main(String[] args) {
        ArticleAnalyzer riano = new ArticleAnalyzer();
        ArrayList<String> lines= FileOperator.getStringList("data.txt");
+       
         for(String line : lines){
     
        Article a=riano.parseJson(line);
+       String clean=riano.removeStopWords(a.getDescription());
+       a.setDescription(clean);
        System.out.println(a);
+       riano.addArticle(a);
         }
-
        
 
 
